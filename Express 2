@@ -1,0 +1,22 @@
+const express = require('express');
+
+const app = express();
+
+const bodyParser = require('body-parser');
+
+const fs = require('fs');
+
+const port = 4000;
+// app.use()
+
+app
+.route("/article").
+post((req,res)=>{
+res.send(' I wil be adding coulpr of articles - POST METHOD')
+}).get((req,res)=>{
+    res.send(' I wil be adding coulpr of articles - GET METHOD')
+}).put((req,res)=>{
+    res.send(' I wil be adding coulpr of articles - PUT METHOD')
+}).delete((req,res)=>{
+    res.send(' I wil be adding coulpr of articles - DELETE METHOD')
+})
